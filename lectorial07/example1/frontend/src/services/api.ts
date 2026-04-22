@@ -14,10 +14,6 @@ export interface User {
 }
 
 export const userApi = {
-  getHomePage: async () => {
-    const response = await api.get("/");
-    return response.data;
-  },
   getAllUsers: async () => {
     const response = await api.get("/users");
     return response.data;
