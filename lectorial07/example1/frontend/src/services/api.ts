@@ -14,7 +14,7 @@ export interface User {
 }
 
 export const userApi = {
-    getAllUsers: async () => {
+  getHomePage: async () => {
     const response = await api.get("/");
     return "You reached the API server for FSD Lectorial 07";
   },
