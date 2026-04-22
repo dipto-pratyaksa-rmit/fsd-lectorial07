@@ -1,7 +1,8 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "http://localhost:3001/api", // Adjust this to match your backend URL
+  //baseURL: "http://localhost:3001/api", // Adjust this to match your backend URL
+  baseURL: "https://fsd-lectorial07.onrender.com/api", // Adjust this to match your backend URL
 });
 
 export interface User {
@@ -13,6 +14,10 @@ export interface User {
 }
 
 export const userApi = {
+    getAllUsers: async () => {
+    const response = await api.get("/");
+    return "You reached the API server for FSD Lectorial 07";
+  },
   getAllUsers: async () => {
     const response = await api.get("/users");
     return response.data;
